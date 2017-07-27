@@ -5,6 +5,7 @@ yabbit = open("build.y")
 TREE = Keyword("tree")
 NAME = Keyword("name")
 AUTHOR = Keyword("author")
+LANGUAGE = Keyword("language")
 
 LBRACE,RBRACE,LPAREN,RPAREN,SEMI,EQUAL,COL = map(Suppress,"{}();=:")
 
@@ -26,4 +27,5 @@ name = Group(NAME + COL + string("name") + SEMI)
 # example: author:'Zack Pace';
 author = Group(AUTHOR + COL + string("author") + SEMI)
 
-#
+# example: language:'Python';
+language = Group(LANGUAGE + COL + string("language") + SEMI)
