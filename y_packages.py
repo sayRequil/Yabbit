@@ -14,12 +14,9 @@ def parse_y():
   string = QuotedString('"')
   
 
+  # Data
   PACK = Keyword("Package")
-  
-  
   DATA = Keyword("Data")
-
-  
   TREE = Keyword("tree")
   
   
