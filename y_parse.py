@@ -46,8 +46,8 @@ def parse_c(file):
   yabbit = Group(YABBIT + DOT + real + COL + string("yabbit") + SEMI) # Yabbit.1.0.0:"latest"
   entry = Group(ENTRY + COL + string("entry") + SEMI)
   
-  
-  tree = Group(TREE + LPAREN + AT + string("project") + LPAREN + LBRACE + Group(ZeroOrMore(file | author | version | language | package | email | yabbit))("body") + RBRACE)
+  tree = Forward()
+  tree >> Group(TREE + LPAREN + AT + string("project") + LPAREN + LBRACE + Group(ZeroOrMore(file | author | version | language | package | email | yabbit))("body") + RBRACE)
   
   
   tree.ignore(cStyleComment)
