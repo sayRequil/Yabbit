@@ -17,7 +17,8 @@ def parse_c():
   # Configurations
   LANGUAGE = Keyword("language")
   AUTHOR = Keyword("author")
-  ORG = Keyword(org)
+  ORG = Keyword("org")
+  DATA = Keyword("Data")
   
   
   # Languages
@@ -38,6 +39,9 @@ def parse_c():
   
   
   language = Group(LANGUAGE + LPAREN + RUBY | PYTHON | JAVASCRIPT | JAVA + RPAREN + SEMI) or Group(LANGUAGE + LPAREN + string("language"))
+  
+  
+  data = Group(DATA + DOT + string("data"))
   
   
   author = Group(AUTHOR + LPAREN + F | L | C + COL + string("author") + RPAREN + SEMI)
