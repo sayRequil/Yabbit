@@ -1,0 +1,5 @@
+tree(@"Yabbit") {
+  data:"Version:1.0.0";
+  Package:"Yabbit";
+  Package:"txt"
+}
