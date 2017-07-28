@@ -19,8 +19,9 @@ def parse_y():
   DATA = Keyword("Data")
   TREE = Keyword("tree")
   
+  tree = Forward()
+  tree >> Group(TREE + LPAREN + AT + string("project") + LPAREN + LBRACE + Group(ZeroOrMore(pack | data))("body") + RBRACE + SEMI)
   
-  tree = Group(TREE + LPAREN + AT + string("project") + LPAREN + LBRACE + Group(ZeroOrMore(pack | data))("body") + RBRACE)
   pack = Group(PACK + DOT + string("package"))
   data = Group(DATA + DOT + string("data"))
   
