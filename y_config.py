@@ -39,17 +39,9 @@ def parse_c():
   
   
   language = Group(LANGUAGE + LPAREN + RUBY | PYTHON | JAVASCRIPT | JAVA + RPAREN + SEMI) or Group(LANGUAGE + LPAREN + string("language"))
-  
-  
   data = Group(DATA + DOT + string("data"))
-  
-  
   author = Group(AUTHOR + LPAREN + F | L | C + COL + string("author") + RPAREN + SEMI)
-  
-  
   org = Group(ORG + LPAREN + AT + string("organization") + RPAREN + SEMI)
-  
-  
   tree = Group(TREE + LPAREN + AT + string("project") + LPAREN + LBRACE + Group(ZeroOrMore(language | author | org | data))("body") + RBRACE)
   
   
