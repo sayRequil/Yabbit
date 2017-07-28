@@ -26,6 +26,8 @@ def parse_c():
   PYTHON = Keyword("python")
   JAVASCRIPT = Keyword("javascript")
   JAVA = Keyword("java")
+  HTML = Keyword("html")
+  LUA = Keyword("lua")
   
 
   # Major
@@ -38,7 +40,7 @@ def parse_c():
   C = Keyword("c")
   
   
-  language = Group(LANGUAGE + COL + RUBY | PYTHON | JAVASCRIPT | JAVA + SEMI)
+  language = Group(LANGUAGE + COL + RUBY | PYTHON | JAVASCRIPT | JAVA | HTML | LUA + SEMI)
   data = Group(DATA + COL + string("data") + SEMI)
   author = Group(AUTHOR + COL + F | L | C + COL + string("author") + SEMI)
   org = Group(ORG + COL + AT + string("organization") + SEMI)
