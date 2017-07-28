@@ -18,7 +18,7 @@ def parse_c():
   LANGUAGE = Keyword("language")
   AUTHOR = Keyword("author")
   ORG = Keyword("org")
-  DATA = Keyword("Data")
+  DATA = Keyword("data")
   
   
   # Languages
