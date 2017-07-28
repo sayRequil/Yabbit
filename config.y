@@ -1,0 +1,11 @@
+/* Config */
+data."Yabbit Script" /* Add Description 1 */
+data."Version 1.0.0" /* Add Description 2 */
+author(f:"Zack")     /* Add Author First Name */
+author(l:"Pace")     /* Add Author Last Name */
+language(python)     /* Add Language */
+
+/* Normal Yabbit */
+settings.file:"config.y";
+entry:"Made By Team Yabbit, Zack Pace, 2017";
+entry:"Yabbit Simple Code";
