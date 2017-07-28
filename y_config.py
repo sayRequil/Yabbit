@@ -4,7 +4,7 @@ def parse_c():
   data = open("conf.y","r")
   
   
-  LBRACE,RBRACE,LPAREN,RPAREN,SEMI,COL,AT = map(Suppress,"{}();:@")
+  LBRACE,RBRACE,LPAREN,RPAREN,SEMI,COL,AT,DOT = map(Suppress,"{}();:@.")
   
   
   real = Regex(r"[+-]?\d+\.\d*").setParseAction(lambda t:float(t[0]))
