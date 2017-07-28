@@ -22,8 +22,8 @@ def parse_y():
   tree = Forward()
   tree >> Group(TREE + LPAREN + AT + string("project") + LPAREN + LBRACE + Group(ZeroOrMore(pack | data))("body") + RBRACE + SEMI)
   
-  pack = Group(PACK + DOT + string("package"))
-  data = Group(DATA + DOT + string("data"))
+  pack = Group(PACK + COL + string("package") + SEMI)
+  data = Group(DATA + COL + string("data") + SEMI)
   
   
   tree.ignore(cStyleComment)
