@@ -38,7 +38,7 @@ def parse_c():
   C = Keyword("c")
   
   
-  language = Group(LANGUAGE + COL + RUBY | PYTHON | JAVASCRIPT | JAVA + SEMI) or Group(LANGUAGE + COL + string("language") + SEMI)
+  language = Group(LANGUAGE + COL + RUBY | PYTHON | JAVASCRIPT | JAVA + SEMI)
   data = Group(DATA + COL + string("data") + SEMI)
   author = Group(AUTHOR + COL + F | L | C + COL + string("author") + SEMI)
   org = Group(ORG + COL + AT + string("organization") + SEMI)
