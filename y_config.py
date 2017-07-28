@@ -1,7 +1,7 @@
 from pyparsing import *
 
 def parse_c():
-  data = open("conf.y","r")
+  data = open("conf.yb","r")
   
   
   LBRACE,RBRACE,LPAREN,RPAREN,SEMI,COL,AT,DOT = map(Suppress,"{}();:@.")
