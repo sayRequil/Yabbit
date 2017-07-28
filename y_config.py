@@ -50,7 +50,7 @@ def parse_c():
   org = Group(ORG + LPAREN + AT + string("organization") + RPAREN + SEMI)
   
   
-  tree = Group(TREE + LPAREN + AT + string("project") + LPAREN + LBRACE + Group(ZeroOrMore(language | author | org))("body") + RBRACE)
+  tree = Group(TREE + LPAREN + AT + string("project") + LPAREN + LBRACE + Group(ZeroOrMore(language | author | org | data))("body") + RBRACE)
   
   
   tree.ignore(cStyleComment)
