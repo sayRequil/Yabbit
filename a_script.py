@@ -8,6 +8,8 @@ y_packages.parse_p()
 
 for file in os.listdir("/"):
     if file.endswith(".y"):
+        print("\n\n ------\n")
+        print(file)
         y_parse.parse_c(file)
         
 print("Parse all Yabbit files.")
